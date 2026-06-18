@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contáctanos — Lácteos La Serranita</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* ===== SECCIÓN CONTACTO PRINCIPAL ===== */
+    #contacto-principal {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 5rem 2rem;
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    #contacto-principal h2 {
+      font-family: var(--fuente-titulo);
+      color: var(--rojo);
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      margin-bottom: 0.75rem;
+    }
+
+    #contacto-principal > div > p {
+      color: var(--texto-gris);
+      margin-bottom: 2rem;
+    }
+
+    /* Info de contacto */
+    .info-contacto {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .info-icono {
+      font-size: 1.6rem;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    .info-item h4 {
+      font-family: var(--fuente-titulo);
+      color: var(--rojo);
+      font-size: 0.95rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .info-item p {
+      font-size: 0.9rem;
+      color: var(--texto-gris);
+    }
+
+    /* Mapa grande */
+    .mapa-contacto {
+      margin-top: 3rem;
+    }
+
+    .mapa-contacto h3 {
+      font-family: var(--fuente-titulo);
+      color: var(--rojo);
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+
+    .mapa-contacto iframe {
+      width: 100%;
+      height: 380px;
+      border: none;
+      border-radius: 14px;
+      box-shadow: 0 4px 20px rgba(192,57,43,0.1);
+    }
+
+    /* Formulario */
+    .formulario-contacto h2 {
+      font-family: var(--fuente-titulo);
+      color: var(--rojo);
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .formulario-contacto p {
+      color: var(--texto-gris);
+      font-size: 0.92rem;
+      margin-bottom: 2rem;
+    }
+
+    /* Horarios */
+    #horarios {
+      background: var(--rojo);
+      max-width: 100% !important;
+      padding: 4rem 2rem !important;
+    }
+
+    #horarios h2 { color: var(--blanco); margin-bottom: 2rem; }
+
+    .tabla-horarios {
+      max-width: 700px;
+      margin: 0 auto;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(245,197,24,0.3);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    .fila-horario {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.85rem 1.5rem;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      font-size: 0.93rem;
+    }
+
+    .fila-horario:last-child { border-bottom: none; }
+    .fila-horario .dia { color: rgba(255,255,255,0.75); }
+    .fila-horario .hora { color: var(--amarillo); font-weight: 600; }
+
+    /* Distribuidores */
+    #distribuidores {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 5rem 2rem;
+    }
+
+    .grid-distribuidores {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+
+    .dist-card {
+      background: var(--gris-fondo);
+      border: 1px solid #f0e8d0;
+      border-radius: 14px;
+      padding: 1.5rem;
+      transition: border-color 0.2s;
+    }
+
+    .dist-card:hover { border-color: var(--amarillo); }
+
+    .dist-card h4 {
+      font-family: var(--fuente-titulo);
+      color: var(--rojo);
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .dist-card p {
+      font-size: 0.85rem;
+      color: var(--texto-gris);
+    }
+
+    @media (max-width: 900px) {
+      #contacto-principal     { grid-template-columns: 1fr; }
+      .grid-distribuidores    { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 600px) {
+      .grid-distribuidores    { grid-template-columns: 1fr; }
+    }
+  </style>
+  <link rel="icon" href="assets/logo.png"/>
+</head>
+<body>
+
+  <header>
+    <div class="contenedor-header">
+      <div class="logo-img">
+        <a href="index.html"><p class="logo">Lácteos La Serranita</p></a>
+        <a href="index.html"><img src="assets/logo.png" alt="Logo La Serranita" class="logo-imagen"/></a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html" class="enlace-contacto activo">Contáctanos</a></li>
+        </ul>
+      </nav>
+      
+    </div>
+  </header>
+
+  <main>
+
+    <section class="portada">
+      <p class="portada-etiqueta">Estamos para servirte</p>
+      <h1>Contáctanos</h1>
+      <p class="portada-descripcion">
+        ¿Tienes un pedido, quieres ser distribuidor o simplemente quieres saber más sobre nuestros productos? Estamos aquí.
+      </p>
+      <a href="index.html" class="boton-principal">Escribir ahora</a>
+    </section>
+
+    <!-- CONTACTO PRINCIPAL -->
+    <div id="contacto-principal">
+
+      <!-- Info + mapa -->
+      <div>
+        <h2>Información de Contacto</h2>
+        <p>Puedes comunicarte con nosotros por los siguientes medios o visitarnos directamente en nuestras instalaciones.</p>
+        <div class="info-contacto">
+          <div class="info-item">
+            <div class="info-icono">📍</div>
+            <div>
+              <h4>Dirección</h4>
+              <p>Av. Los Lácteos 123, Huancayo, Perú</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icono">📞</div>
+            <div>
+              <h4>Teléfono</h4>
+              <p>(51) 964 057 777</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icono">✉️</div>
+            <div>
+              <h4>Correo</h4>
+              <p>contacto@laserranita.pe</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icono">💬</div>
+            <div>
+              <h4>WhatsApp</h4>
+              <p>+51 964 057 777</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mapa-contacto">
+          <h3>¿Cómo llegar?</h3>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.7600977958086!2d-75.2151509!3d-12.0600205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x910e970079bec243%3A0xee348a6b80153301!2sCl%C3%ADnica%20Dental%20Maxilofacial%20CIMAXZ!5e0!3m2!1ses-419!2spe!4v1779899773404!5m2!1ses-419!2spe"
+            width="100%" height="380"
+            title="Ubicación Lácteos La Serranita">
+          </iframe>
+        </div>
+      </div>
+
+      
+      <!-- Formulario -->
+      <div class="formulario-contacto">
+        <h2>Envíanos un Mensaje</h2>
+        <p>Responderemos a la brevedad posible. Para pedidos urgentes, contáctanos por WhatsApp.</p>
+        <form action="#" method="post">
+          <div class="campo">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required />
+          </div>
+          <div class="campo">
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" name="correo" placeholder="Ej: juan@correo.com" required />
+          </div>
+          <div class="campo">
+            <label for="telefono">Teléfono (opcional)</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="Ej: 964 057 777" />
+          </div>
+          <div class="campo">
+            <label for="asunto">Asunto</label>
+            <input type="text" id="asunto" name="asunto" placeholder="Ej: Pedido al por mayor, consulta de precios..." />
+          </div>
+          <div class="campo">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntanos en qué te podemos ayudar..." required></textarea>
+          </div>
+          <button type="submit" class="boton-enviar">Enviar mensaje</button>
+        </form>
+      </div>
+
+    </div>
+
+    <!-- HORARIOS -->
+    <section id="horarios">
+      <h2>Horarios de Atención</h2>
+      <div class="tabla-horarios">
+        <div class="fila-horario">
+          <span class="dia">Lunes — Viernes</span>
+          <span class="hora">7:00 AM — 6:00 PM</span>
+        </div>
+        <div class="fila-horario">
+          <span class="dia">Sábado</span>
+          <span class="hora">7:00 AM — 2:00 PM</span>
+        </div>
+        <div class="fila-horario">
+          <span class="dia">Domingo</span>
+          <span class="hora">Cerrado</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- DISTRIBUIDORES -->
+    <section id="distribuidores">
+      <h2>Puntos de Venta</h2>
+      <p>Encuentra nuestros productos en estos puntos de distribución de la región.</p>
+      
+      <div class="grid-distribuidores">
+        <div class="dist-card">
+          <h4>Mercado Central — Huancayo</h4>
+          <p>Stand 24, pasillo de lácteos. Lunes a sábado, 6 AM - 2 PM.</p>
+        </div>
+
+
+        <div class="dist-card">
+          <h4>Minimarket Los Andes</h4>
+          <p>Jr. Parra del Riego 120, Huancayo. Todos los días.</p>
+        </div>
+
+
+        <div class="dist-card">
+          <h4>Tienda Naturista Serrana</h4>
+          <p>Av. Giráldez 450, Huancayo. Lunes a sábado.</p>
+        </div>
+
+
+        <div class="dist-card">
+          <h4>Supermercado El Campo</h4>
+          <p>Calle Real 230, Chilca. Todos los días.</p>
+        </div>
+
+
+        <div class="dist-card">
+          <h4>Feria Sabatina de Huancayo</h4>
+          <p>Parque Tupac Amaru. Solo sábados, 7 AM - 1 PM.</p>
+        </div>
+
+
+        <div class="dist-card">
+          <h4>Delivery a Domicilio</h4>
+          <p>Pedidos por WhatsApp con despacho los martes y viernes.</p>
+        </div>
+
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+
+    <div class="footer-superior">
+      <div class="footer-col">
+        <h4>Dirección</h4>
+        <p>Jr. Ancash 12001</p>
+        <p>Huancayo, Perú</p>
+      </div>
+
+
+      <div class="footer-col">
+        <h4>Contactos</h4>
+        <p>(51) 964 057 777</p>
+        <p>(51) 934 217 157</p>
+        <p>(51) 965 015 987</p>
+      </div>
+
+
+      <div class="footer-col">
+        <h4>Correo</h4>
+        <p>contacto@laserranita.pe</p>
+      </div>
+
+
+      <div class="footer-col">
+        <h4>Redes Sociales</h4>
+        <ul class="redes">
+          <li><a href="https://www.facebook.com/laserranitahyo/?locale=es_LA" aria-label="Facebook"><img src="assets/Facebook_logo.png" alt="Facebook" /></a></li>
+          <li><a href="https://www.instagram.com/laserranitaperu/" aria-label="Instagram"><img src="assets/instagram_logo.jfif" alt="Instagram" /></a></li>
+          <li><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fapi.whatsapp.com%2Fsend%3Fphone%3D%252B51964970065%26token%3DeyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjEyNSJ9.eyJleHAiOjE3ODA2MzEyODQsInBob25lIjoiKzUxOTY0OTcwMDY1IiwiY29udGV4dCI6IkFmZ211MTBKUURPcGcyUlNyaGRoSDExYUFyU1E4QzNLZU1TWjRzWklTdmhVN09SSHktZm45UmpHaE5oenEzczdhUE41ci12cndqOTgxaXBtTGUwZjh1dWRuYjBoYVZ1dEc0MTFlLW1ibzFfd3UwV0FCS1dhcVBxN3EyLXZwQ0VKOWFGSE9qWUZ6Q3NTejF4TGFIbTd6SEdET0EiLCJzb3VyY2UiOiJGQl9QYWdlIiwiYXBwIjoiZmFjZWJvb2siLCJlbnRyeV9wb2ludCI6InBhZ2VfY3RhIn0.iI4_0o6UHPF47bLHSgiYkqQqI9kjfKIXIa4lZduX_I9n-ljQZoK2Nqo3izYyISVVzP5boEis6bMj01ueJvktQg%26fbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBEySTQ2TEY0Vm5tMGRibXNyY3NydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR6zUaKrujEdwERulEH0NSrzkGAEKBOvTR_unSqpJ7K9KDKa8e9Rzgj85-fkyg_aem_uAPpRJzOKY1f6VNc8XnQPQ&h=AUCJJzPW6DsIetnG6OYWpsUApC7blr980k3so0Pnj7x5Q8giATZRbY-pVNGSZDFiSJadgcIegbVO73_K0-MiLVnk4eQMDqWKFeW3LLFny_ieMPT0PdTybYANBW-RwoRMrkwfKEBXDHKPh2r_5Z5WZQ" aria-label="WhatsApp"><img src="assets/WhatsApp_Logo.png" alt="WhatsApp" /></a></li>
+          <li><a href="https://www.tiktok.com/@laserranitaperu" aria-label="TikTok"><img src="assets/tiktok_logo.png" alt="TikTok" /></a></li>
+        </ul>
+      </div>  
+    </div>
+
+
+    <div class="footer-inferior">
+      <div class="logo-img">
+        <a href="index.html">
+          <p class="logo">La Serranita</p>
+        </a>
+        <a href="index.html"><img src="assets/logo.png" alt="Logo La Serranita" class="logo-imagen" /></a>
+      </div>
+      <p class="pie-copy"> 2026 Lácteos La Serranita. Todos los derechos reservados.</p>
+      <p class="pie-info">Página realizada por: Grupo 01</p>
+    </div>
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Carrito - La Serranita Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body class="bg-light">
+
+    <nav class="navbar navbar-light bg-white border-bottom p-3">
+        <div class="container">
+            <a class="navbar-brand text-danger fw-bold" href="index2.html">← Volver a La Serranita</a>
+            <span class="fs-4 fw-bold">Tu Carrito <i class="bi bi-cart-fill text-warning"></i></span>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="card p-4 shadow-sm border-0">
+                    <table class="table align-middle">
+                        <thead>
+                            <tr>
+                                <th>Producto</th>
+                                <th>Precio</th>
+                                <th>Cantidad</th>
+                                <th>Total</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="lista-carrito">
+                            </tbody>
+                    </table>
+                    <button class="btn btn-sm btn-secondary w-25" onclick="vaciarCarrito()">Vaciar Carrito</button>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card p-4 shadow-sm border-0 bg-white">
+                    <h4 class="mb-4 text-dark font-weight-bold">Resumen</h4>
+                    <div class="d-flex justify-content-between mb-3">
+                        <span>Subtotal:</span>
+                        <span id="subtotal">S/. 0.00</span>
+                    </div>
+                    <div class="d-flex justify-content-between mb-3">
+                        <span>Envío:</span>
+                        <span class="text-success">Gratis</span>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between mb-4 fs-5 fw-bold">
+                        <span>Total:</span>
+                        <span id="total-compra" class="text-danger">S/. 0.00</span>
+                    </div>
+                    <a href="pago.html" class="btn btn-danger w-100 py-2 fw-bold">Proceder al Pago</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="carrito.js"></script>
+</body>
+</html>

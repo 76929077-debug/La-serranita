@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lácteos La Serranita</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* ===== NOSOTROS ===== */
+    .contenedor-nosotros {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .texto-nosotros {
+      width: 60%;
+    }
+
+    .imagen-nosotros {
+      width: 40%;
+    }
+
+    .imagen-nosotros img {
+      width: 100%;
+      border-radius: 15px;
+    }
+
+    /* ===== ÁREAS / SECCIONES ===== */
+    .seccion-areas {
+      background: var(--gris-fondo);
+      max-width: 100% !important;
+      padding: 5rem 2rem !important;
+    }
+
+    .seccion-areas h2 {
+      max-width: 1100px;
+      margin: 0 auto 3rem;
+    }
+
+    .contenedor-areas {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .tarjeta-area {
+      background: var(--blanco);
+      border: 1px solid #f0e8d0;
+      border-radius: 18px;
+      padding: 2rem;
+      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    }
+
+    .tarjeta-area:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 28px rgba(192, 57, 43, 0.1);
+      border-color: var(--amarillo);
+    }
+
+    .tarjeta-area h3 {
+      font-family: var(--fuente-titulo);
+      color: var(--rojo);
+      font-size: 1.2rem;
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--amarillo);
+      display: inline-block;
+    }
+
+    .tarjeta-area p {
+      font-size: 0.92rem;
+      color: var(--texto-gris);
+      margin-bottom: 1.5rem;
+    }
+
+    .tarjeta-area a {
+      color: var(--rojo);
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      border-bottom: 2px solid var(--amarillo);
+      padding-bottom: 2px;
+      transition: color 0.2s;
+    }
+
+    .tarjeta-area a:hover {
+      color: var(--rojo-oscuro);
+    }
+
+    /* CTA productos */
+    #cta-productos {
+      text-align: center;
+      background: var(--rojo);
+      max-width: 100% !important;
+      padding: 4rem 2rem !important;
+    }
+
+    #cta-productos h2 {
+      color: var(--blanco);
+      margin-bottom: 1rem;
+    }
+
+    #cta-productos p {
+      color: rgba(255, 255, 255, 0.75);
+      max-width: 600px;
+      margin: 0 auto 2rem;
+    }
+
+    @media (max-width: 900px) {
+      .contenedor-areas {
+        grid-template-columns: 1fr;
+      }
+
+      .contenedor-nosotros {
+        flex-direction: column;
+      }
+
+      .texto-nosotros,
+      .imagen-nosotros {
+        width: 100%;
+      }
+    }
+  </style>
+  <link rel="icon" href="assets/LOGO.png" />
+</head>
+
+<body>
+
+  <!-- ENCABEZADO -->
+  <header>
+
+
+    <div class="contenedor-header">
+      <div class="logo-img">
+        <a href="index.html">
+          <p class="logo">Lácteos La Serranita</p>
+        </a>
+        <a href="index.html"><img src="assets/LOGO.png" alt="Logo La Serranita" class="logo-imagen" /></a>
+      </div>
+
+      
+      <nav>
+        <ul>
+          <li><a href="index.html" class="activo">Inicio</a></li>
+          <li><a href="ecommerce/index2.html">Tienda</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html" class="enlace-contacto">Contáctanos</a></li>
+        </ul>
+        
+      </nav>
+
+
+
+    </div>
+  </header>
+
+
+
+  <main>
+
+    <!-- PORTADA -->
+    <section class="portada">
+      <p class="portada-etiqueta">Del campo serrano a tu mesa</p>
+      <h1>Bienvenidos a La Serranita</h1>
+      <p class="portada-descripcion">
+        Lácteos naturales elaborados con leche fresca de los valles andinos. Tradición, sabor y calidad en cada
+        producto.
+      </p>
+      <a href="nosotros.html" class="boton-principal">Conócenos</a>
+    </section>
+
+    <!-- NOSOTROS BREVE -->
+    <section id="nosotros">
+      <div class="contenedor-nosotros">
+        <div class="texto-nosotros">
+          <h2>Nuestra Historia</h2>
+          <p>
+            Lácteos La Serranita nació con la misión de llevar el sabor auténtico de los andes a cada hogar peruano.
+            Desde nuestros orígenes, trabajamos de la mano con ganaderos locales comprometidos con el bienestar animal y
+            el cuidado del medio ambiente, asegurando que cada litro de leche que procesamos sea de la más alta calidad.
+          </p>
+          <p>
+            Con el paso de los años hemos ampliado nuestra línea de productos, sumando quesos frescos, yogures
+            artesanales, mantequilla y más. Nuestro compromiso es claro: ofrecer productos naturales, nutritivos y
+            deliciosos, elaborados con procesos higiénicos rigurosos y el calor de la tradición serrana. En La
+            Serranita, cada producto cuenta una historia de campo, esfuerzo y amor por lo nuestro.
+          </p>
+        </div>
+        <div class="imagen-nosotros">
+          <img src="assets/nosotros.jpg" alt="Instalaciones de Lácteos La Serranita" />
+        </div>
+      </div>
+    </section>
+
+
+    <!-- NUESTRAS SECCIONES -->
+    <section class="seccion-areas" id="secciones">
+      <h2>Explora La Serranita</h2>
+      <div class="contenedor-areas">
+
+        <article class="tarjeta-area">
+          <h3>Nuestros Productos</h3>
+          <p>Quesos, yogures, mantequilla y más. Descubre toda nuestra línea de lácteos artesanales.</p>
+          <a href="productos.html">Ver productos</a>
+        </article>
+
+        <article class="tarjeta-area">
+          <h3>Nuestra Empresa</h3>
+          <p>Conoce nuestra historia, valores y el equipo apasionado que está detrás de cada producto.</p>
+          <a href="nosotros.html">Conocer más</a>
+        </article>
+
+        <article class="tarjeta-area">
+          <h3>¿Dónde comprarnos?</h3>
+          <p>Distribución en tiendas, mercados y entregas a domicilio en toda la región.</p>
+          <a href="#contacto">Ver puntos de venta</a>
+        </article>
+
+        <article class="tarjeta-area">
+          <h3>Contáctanos</h3>
+          <p>¿Tienes pedidos al por mayor o quieres ser distribuidor? Escríbenos.</p>
+          <a href="#contacto">Escribir ahora</a>
+        </article>
+      </div>
+    </section>
+
+
+
+    <!-- CTA PRODUCTOS -->
+    <section id="cta-productos">
+      <h2>Productos Naturales del Ande</h2>
+      <p>Elaborados con leche fresca, sin conservantes artificiales y con el sabor de siempre.</p>
+      <a href="productos.html" class="boton-principal">Ver todos los productos</a>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section id="testimonios">
+      <h2>Lo que dicen nuestros clientes</h2>
+      <div class="contenedor-testimonios">
+
+        <article class="testimonio">
+          <h3>Rosa Quispe</h3>
+          <p>Cliente — Queso fresco</p>
+          <blockquote>El queso de La Serranita es el mejor que he probado. Siempre fresco, cremoso y con ese sabor de
+            antes que ya no se encuentra en cualquier lado. Mi familia no consume otro.</blockquote>
+        </article>
+
+        <article class="testimonio">
+          <h3>Carlos Mendoza</h3>
+          <p>Cliente — Yogur natural</p>
+          <blockquote>Empecé a pedir el yogur para mis hijos y ya no lo cambiamos. Sin colorantes, sin sabores
+            artificiales. Se nota que es producto de verdad. ¡Los recomiendo ampliamente!</blockquote>
+        </article>
+
+        <article class="testimonio">
+          <h3>Silvia Rojas</h3>
+          <p>Distribuidora — Tienda de abarrotes</p>
+          <blockquote>Trabajo con La Serranita hace más de dos años. Sus productos se venden solos, los clientes siempre
+            los piden. Excelente calidad y muy buena atención en pedidos.</blockquote>
+        </article>
+      </div>
+    </section>
+
+
+
+    <!-- CONTACTO -->
+    <aside id="contacto">
+      <div class="contenedor-aside">
+
+        <div class="aside-formulario">
+          <h2>Contáctanos</h2>
+          <p class="aside-subtitulo">¿Tienes un pedido, quieres ser distribuidor o tienes alguna consulta? Escríbenos.
+          </p>
+
+
+          <form action="#" method="post">
+            <div class="campo">
+              <label for="nombre">Nombre completo</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required />
+            </div>
+
+
+            <div class="campo">
+              <label for="correo">Correo electrónico</label>
+              <input type="email" id="correo" name="correo" placeholder="Ej: juan@correo.com" required />
+            </div>
+
+
+            <div class="campo">
+              <label for="telefono">Teléfono (opcional)</label>
+              <input type="tel" id="telefono" name="telefono" placeholder="Ej: 964 057 777" />
+            </div>
+
+            
+            <div class="campo">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu consulta o pedido aquí..."
+                required></textarea>
+            </div>
+            <button type="submit" class="boton-enviar">Enviar mensaje</button>
+          </form>
+        </div>
+
+        <div class="aside-mapa">
+          <h3>¿Dónde estamos?</h3>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.7600977958086!2d-75.2151509!3d-12.0600205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x910e970079bec243%3A0xee348a6b80153301!2sCl%C3%ADnica%20Dental%20Maxilofacial%20CIMAXZ!5e0!3m2!1ses-419!2spe!4v1779899773404!5m2!1ses-419!2spe"
+            width="600" height="400" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="Ubicación de Lácteos La Serranita">
+          </iframe>
+        </div>
+
+      </div>
+    </aside>
+  </main>
+
+
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+
+    <div class="footer-superior">
+      <div class="footer-col">
+        <h4>Dirección</h4>
+        <p>Jr. Ancash 12001</p>
+        <p>Huancayo, Perú</p>
+      </div>
+
+
+      <div class="footer-col">
+        <h4>Contactos</h4>
+        <p>(51) 964 057 777</p>
+        <p>(51) 934 217 157</p>
+        <p>(51) 965 015 987</p>
+      </div>
+
+
+      <div class="footer-col">
+        <h4>Correo</h4>
+        <p>contacto@laserranita.pe</p>
+      </div>
+
+
+      <div class="footer-col">
+        <h4>Redes Sociales</h4>
+        <ul class="redes">
+          <li><a href="https://www.facebook.com/laserranitahyo/?locale=es_LA" aria-label="Facebook"><img src="assets/Facebook_logo.png" alt="Facebook" /></a></li>
+          <li><a href="https://www.instagram.com/laserranitaperu/" aria-label="Instagram"><img src="assets/instagram_logo.jfif" alt="Instagram" /></a></li>
+          <li><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fapi.whatsapp.com%2Fsend%3Fphone%3D%252B51964970065%26token%3DeyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjEyNSJ9.eyJleHAiOjE3ODA2MzEyODQsInBob25lIjoiKzUxOTY0OTcwMDY1IiwiY29udGV4dCI6IkFmZ211MTBKUURPcGcyUlNyaGRoSDExYUFyU1E4QzNLZU1TWjRzWklTdmhVN09SSHktZm45UmpHaE5oenEzczdhUE41ci12cndqOTgxaXBtTGUwZjh1dWRuYjBoYVZ1dEc0MTFlLW1ibzFfd3UwV0FCS1dhcVBxN3EyLXZwQ0VKOWFGSE9qWUZ6Q3NTejF4TGFIbTd6SEdET0EiLCJzb3VyY2UiOiJGQl9QYWdlIiwiYXBwIjoiZmFjZWJvb2siLCJlbnRyeV9wb2ludCI6InBhZ2VfY3RhIn0.iI4_0o6UHPF47bLHSgiYkqQqI9kjfKIXIa4lZduX_I9n-ljQZoK2Nqo3izYyISVVzP5boEis6bMj01ueJvktQg%26fbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBEySTQ2TEY0Vm5tMGRibXNyY3NydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR6zUaKrujEdwERulEH0NSrzkGAEKBOvTR_unSqpJ7K9KDKa8e9Rzgj85-fkyg_aem_uAPpRJzOKY1f6VNc8XnQPQ&h=AUCJJzPW6DsIetnG6OYWpsUApC7blr980k3so0Pnj7x5Q8giATZRbY-pVNGSZDFiSJadgcIegbVO73_K0-MiLVnk4eQMDqWKFeW3LLFny_ieMPT0PdTybYANBW-RwoRMrkwfKEBXDHKPh2r_5Z5WZQ" aria-label="WhatsApp"><img src="assets/WhatsApp_Logo.png" alt="WhatsApp" /></a></li>
+          <li><a href="https://www.tiktok.com/@laserranitaperu" aria-label="TikTok"><img src="assets/tiktok_logo.png" alt="TikTok" /></a></li>
+        </ul>
+      </div>  
+    </div>
+
+
+    <div class="footer-inferior">
+      <div class="logo-img">
+        <a href="index.html">
+          <p class="logo">La Serranita</p>
+        </a>
+        <a href="index.html"><img src="assets/logo.png" alt="Logo La Serranita" class="logo-imagen" /></a>
+      </div>
+      <p class="pie-copy"> 2026 Lácteos La Serranita. Todos los derechos reservados.</p>
+      <p class="pie-info">Página realizada por: Grupo 01</p>
+    </div>
+
+
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

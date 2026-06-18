@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Productos — Lácteos La Serranita</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* ===== GRILLA DE PRODUCTOS ===== */
+    #catalogo {
+      background: var(--gris-fondo);
+      max-width: 100% !important;
+      padding: 5rem 2rem !important;
+    }
+
+    #catalogo h2 {
+      max-width: 1100px;
+      margin: 0 auto 0.75rem;
+    }
+
+    #catalogo > p {
+      max-width: 1100px;
+      margin: 0 auto 3rem;
+      color: var(--texto-gris);
+    }
+
+    .grid-productos {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.75rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .tarjeta-producto {
+      background: var(--blanco);
+      border: 1px solid #f0e8d0;
+      border-radius: 18px;
+      overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .tarjeta-producto:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(192,57,43,0.12);
+    }
+
+    .tarjeta-producto .producto-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 0;
+      background: #fdf0d0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .tarjeta-producto .producto-img img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 0;
+    }
+
+    .producto-emoji {
+      font-size: 5rem;
+      text-align: center;
+      padding: 2rem 0;
+      background: #fdf0d0;
+      border-radius: 0;
+    }
+
+    .tarjeta-producto .producto-info {
+      padding: 1.4rem 1.5rem 1.6rem;
+    }
+
+    .tarjeta-producto h3 {
+      font-family: var(--fuente-titulo);
+      font-size: 1.15rem;
+      color: var(--rojo);
+      margin-bottom: 0.4rem;
+      border-bottom: 2px solid var(--amarillo);
+      display: inline-block;
+      padding-bottom: 0.3rem;
+    }
+
+    .tarjeta-producto p {
+      font-size: 0.88rem;
+      color: var(--texto-gris);
+      margin-top: 0.6rem;
+      line-height: 1.6;
+    }
+
+    .badge-natural {
+      display: inline-block;
+      background: #eafaf1;
+      color: #1e7e34;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      padding: 0.2rem 0.6rem;
+      border-radius: 20px;
+      margin-top: 0.8rem;
+      border: 1px solid #b2dfdb;
+    }
+
+    /* ===== BANNER CALIDAD ===== */
+    #calidad {
+      background: var(--rojo);
+      max-width: 100% !important;
+      padding: 4rem 2rem !important;
+      text-align: center;
+    }
+
+    #calidad h2 { color: var(--blanco); margin-bottom: 1rem; }
+    #calidad p  { color: rgba(255,255,255,0.75); max-width: 640px; margin: 0 auto; }
+
+    /* ===== PROCESO ===== */
+    .pasos {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+
+    .paso {
+      text-align: center;
+      background: var(--gris-fondo);
+      border: 1px solid #f0e8d0;
+      border-radius: 14px;
+      padding: 1.75rem 1.25rem;
+      transition: border-color 0.2s;
+    }
+
+    .paso:hover { border-color: var(--amarillo); }
+
+    .paso-numero {
+      font-family: var(--fuente-titulo);
+      font-size: 2.5rem;
+      color: var(--amarillo-osc);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .paso h3 {
+      font-family: var(--fuente-titulo);
+      font-size: 1rem;
+      color: var(--rojo);
+      margin-bottom: 0.4rem;
+    }
+
+    .paso p { font-size: 0.85rem; color: var(--texto-gris); }
+
+    @media (max-width: 900px) {
+      .grid-productos { grid-template-columns: repeat(2, 1fr); }
+      .pasos          { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 600px) {
+      .grid-productos { grid-template-columns: 1fr; }
+      .pasos          { grid-template-columns: 1fr; }
+    }
+  </style>
+  <link rel="icon" href="assets/logo.png"/>
+</head>
+<body>
+
+  <header>
+    <div class="contenedor-header">
+      <div class="logo-img">
+        <a href="index.html"><p class="logo">Lácteos La Serranita</p></a>
+        <a href="index.html"><img src="assets/logo.png" alt="Logo La Serranita" class="logo-imagen"/></a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html" class="activo">Productos</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="#contacto" class="enlace-contacto">Contáctanos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="portada">
+      <p class="portada-etiqueta">Sabor natural del ande</p>
+      <h1>Nuestros Productos</h1>
+      <p class="portada-descripcion">
+        Lácteos artesanales elaborados con leche fresca, sin conservantes artificiales y con procesos higiénicos rigurosos. Del campo a tu mesa.
+      </p>
+      <a href="#catalogo" class="boton-principal">Ver catálogo</a>
+    </section>
+
+    <!-- CATÁLOGO -->
+    <section id="catalogo">
+      <h2>Catálogo de Productos</h2>
+      <p>Todos nuestros productos son elaborados con leche fresca de ganaderos locales y controles de calidad estrictos.</p>
+
+      <div class="grid-productos">
+
+        <article class="tarjeta-producto">
+          <div class="producto-emoji">🧀</div>
+          <div class="producto-info">
+            <h3>Queso Fresco</h3>
+            <p>Elaborado diariamente con leche entera. Textura suave, sabor delicado y alto contenido proteico. Ideal para ensaladas, guisos y desayunos.</p>
+            <span class="badge-natural">100% Natural</span>
+          </div>
+        </article>
+
+        <article class="tarjeta-producto">
+          <div class="producto-emoji">🥛</div>
+          <div class="producto-info">
+            <h3>Leche Fresca</h3>
+            <p>Directamente de las granjas serranas. Pasteurizada, nutritiva y con todo el sabor natural. Sin aditivos ni conservantes.</p>
+            <span class="badge-natural">Sin conservantes</span>
+          </div>
+        </article>
+
+        <article class="tarjeta-producto">
+          <div class="producto-emoji">🍦</div>
+          <div class="producto-info">
+            <h3>Yogur Artesanal</h3>
+            <p>Preparado con cultivos vivos seleccionados. Disponible en natural, fresa, durazno y vainilla. Cremoso y beneficioso para la digestión.</p>
+            <span class="badge-natural">Con probióticos</span>
+          </div>
+        </article>
+
+        <article class="tarjeta-producto">
+          <div class="producto-emoji">🧈</div>
+          <div class="producto-info">
+            <h3>Mantequilla Serrana</h3>
+            <p>Elaborada con crema de leche fresca. Sabor intenso, color dorado natural y perfecta para repostería, cocina o untar en pan.</p>
+            <span class="badge-natural">100% Natural</span>
+          </div>
+        </article>
+
+        <article class="tarjeta-producto">
+          <div class="producto-emoji">🥄</div>
+          <div class="producto-info">
+            <h3>Manjar Blanco</h3>
+            <p>Tradicional receta serrana de dulce de leche. Elaborado a fuego lento con leche y azúcar de caña. Textura espesa y sabor incomparable.</p>
+            <span class="badge-natural">Receta tradicional</span>
+          </div>
+        </article>
+
+        <article class="tarjeta-producto">
+          <div class="producto-emoji">🧀</div>
+          <div class="producto-info">
+            <h3>Queso Andino Madurado</h3>
+            <p>Curado por semanas en condiciones controladas. Sabor más intenso y concentrado, perfecto para tablas de quesos y cocina gourmet.</p>
+            <span class="badge-natural">Maduración artesanal</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- BANNER CALIDAD -->
+    <section id="calidad">
+      <h2>Calidad Garantizada en Cada Producto</h2>
+      <p>Aplicamos estrictos controles de higiene y calidad en todas las etapas de producción, desde el ordeño hasta el empaque final.</p>
+    </section>
+
+    <!-- PROCESO -->
+    <section id="proceso">
+      <h2>Nuestro Proceso</h2>
+      <p>De la vaca a tu mesa, cada paso es supervisado con rigurosos estándares de calidad e higiene.</p>
+
+      <div class="pasos">
+        <div class="paso">
+          <div class="paso-numero">01</div>
+          <h3>Recolección</h3>
+          <p>Leche fresca recolectada diariamente de ganaderos locales seleccionados.</p>
+        </div>
+        <div class="paso">
+          <div class="paso-numero">02</div>
+          <h3>Control de Calidad</h3>
+          <p>Análisis de calidad y pasteurización para garantizar un producto seguro y nutritivo.</p>
+        </div>
+        <div class="paso">
+          <div class="paso-numero">03</div>
+          <h3>Elaboración</h3>
+          <p>Procesamiento artesanal con recetas tradicionales y maquinaria de primer nivel.</p>
+        </div>
+        <div class="paso">
+          <div class="paso-numero">04</div>
+          <h3>Distribución</h3>
+          <p>Empaque higiénico y distribución rápida para que llegue fresco a tu hogar.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section id="testimonios">
+      <h2>Lo que dicen nuestros clientes</h2>
+      <div class="contenedor-testimonios">
+        <article class="testimonio">
+          <h3>Rosa Quispe</h3>
+          <p>Cliente — Queso fresco</p>
+          <blockquote>El queso de La Serranita es el mejor que he probado. Siempre fresco, cremoso y con ese sabor de antes. Mi familia no consume otro.</blockquote>
+        </article>
+        <article class="testimonio">
+          <h3>Carlos Mendoza</h3>
+          <p>Cliente — Yogur natural</p>
+          <blockquote>El yogur para mis hijos ya no lo cambiamos. Sin colorantes, sin artificiales. Se nota que es producto de verdad.</blockquote>
+        </article>
+        <article class="testimonio">
+          <h3>Silvia Rojas</h3>
+          <p>Distribuidora — Abarrotes</p>
+          <blockquote>Sus productos se venden solos, los clientes siempre los piden. Excelente calidad y muy buena atención.</blockquote>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <aside id="contacto">
+      <div class="contenedor-aside">
+        <div class="aside-formulario">
+          <h2>¿Quieres hacer un pedido?</h2>
+          <p class="aside-subtitulo">Escríbenos para pedidos al por mayor, distribución o consultas sobre nuestros productos.</p>
+          <form action="#" method="post">
+            <div class="campo">
+              <label for="nombre">Nombre completo</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required />
+            </div>
+            <div class="campo">
+              <label for="correo">Correo electrónico</label>
+              <input type="email" id="correo" name="correo" placeholder="Ej: juan@correo.com" required />
+            </div>
+            <div class="campo">
+              <label for="telefono">Teléfono (opcional)</label>
+              <input type="tel" id="telefono" name="telefono" placeholder="Ej: 964 057 777" />
+            </div>
+            <div class="campo">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" rows="4" placeholder="Producto de interés, cantidad, etc." required></textarea>
+            </div>
+            <button type="submit" class="boton-enviar">Enviar mensaje</button>
+          </form>
+        </div>
+        <div class="aside-mapa">
+          <h3>¿Dónde estamos?</h3>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.7600977958086!2d-75.2151509!3d-12.0600205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x910e970079bec243%3A0xee348a6b80153301!2sCl%C3%ADnica%20Dental%20Maxilofacial%20CIMAXZ!5e0!3m2!1ses-419!2spe!4v1779899773404!5m2!1ses-419!2spe"
+            width="100%" height="380"
+            title="Ubicación Lácteos La Serranita">
+          </iframe>
+        </div>
+      </div>
+    </aside>
+
+  </main>
+
+  <footer>
+
+    <div class="footer-superior">
+      <div class="footer-col">
+        <h4>Dirección</h4>
+        <p>Jr. Ancash 12001</p>
+        <p>Huancayo, Perú</p>
+      </div>
+
+
+      <div class="footer-col">
+        <h4>Contactos</h4>
+        <p>(51) 964 057 777</p>
+        <p>(51) 934 217 157</p>
+        <p>(51) 965 015 987</p>
+      </div>
+
+
+      <div class="footer-col">
+        <h4>Correo</h4>
+        <p>contacto@laserranita.pe</p>
+      </div>
+
+
+      <div class="footer-col">
+        <h4>Redes Sociales</h4>
+        <ul class="redes">
+          <li><a href="https://www.facebook.com/laserranitahyo/?locale=es_LA" aria-label="Facebook"><img src="assets/Facebook_logo.png" alt="Facebook" /></a></li>
+          <li><a href="https://www.instagram.com/laserranitaperu/" aria-label="Instagram"><img src="assets/instagram_logo.jfif" alt="Instagram" /></a></li>
+          <li><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fapi.whatsapp.com%2Fsend%3Fphone%3D%252B51964970065%26token%3DeyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjEyNSJ9.eyJleHAiOjE3ODA2MzEyODQsInBob25lIjoiKzUxOTY0OTcwMDY1IiwiY29udGV4dCI6IkFmZ211MTBKUURPcGcyUlNyaGRoSDExYUFyU1E4QzNLZU1TWjRzWklTdmhVN09SSHktZm45UmpHaE5oenEzczdhUE41ci12cndqOTgxaXBtTGUwZjh1dWRuYjBoYVZ1dEc0MTFlLW1ibzFfd3UwV0FCS1dhcVBxN3EyLXZwQ0VKOWFGSE9qWUZ6Q3NTejF4TGFIbTd6SEdET0EiLCJzb3VyY2UiOiJGQl9QYWdlIiwiYXBwIjoiZmFjZWJvb2siLCJlbnRyeV9wb2ludCI6InBhZ2VfY3RhIn0.iI4_0o6UHPF47bLHSgiYkqQqI9kjfKIXIa4lZduX_I9n-ljQZoK2Nqo3izYyISVVzP5boEis6bMj01ueJvktQg%26fbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBEySTQ2TEY0Vm5tMGRibXNyY3NydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR6zUaKrujEdwERulEH0NSrzkGAEKBOvTR_unSqpJ7K9KDKa8e9Rzgj85-fkyg_aem_uAPpRJzOKY1f6VNc8XnQPQ&h=AUCJJzPW6DsIetnG6OYWpsUApC7blr980k3so0Pnj7x5Q8giATZRbY-pVNGSZDFiSJadgcIegbVO73_K0-MiLVnk4eQMDqWKFeW3LLFny_ieMPT0PdTybYANBW-RwoRMrkwfKEBXDHKPh2r_5Z5WZQ" aria-label="WhatsApp"><img src="assets/WhatsApp_Logo.png" alt="WhatsApp" /></a></li>
+          <li><a href="https://www.tiktok.com/@laserranitaperu" aria-label="TikTok"><img src="assets/tiktok_logo.png" alt="TikTok" /></a></li>
+        </ul>
+      </div>  
+    </div>
+
+
+    <div class="footer-inferior">
+      <div class="logo-img">
+        <a href="index.html">
+          <p class="logo">La Serranita</p>
+        </a>
+        <a href="index.html"><img src="assets/logo.png" alt="Logo La Serranita" class="logo-imagen" /></a>
+      </div>
+      <p class="pie-copy"> 2026 Lácteos La Serranita. Todos los derechos reservados.</p>
+      <p class="pie-info">Página realizada por: Grupo 01</p>
+    </div>
+
+
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
